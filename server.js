@@ -7,7 +7,7 @@ const mongodb = require('./data/database');
 //links to the routes folder
 app.use('/', require('./routes'));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 mongodb.initDb((err) => {
